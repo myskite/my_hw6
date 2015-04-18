@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+	div.HW
+		div Homework
+			ul
+				ls
+					- for (var i = 0; i < hw.length; i++)
+						li #{hw[i].username}_#{hw[i].submit}
+
+
+
+	div DDL = #{hw[0].deadLine} 
+		form(action='DL' method='post') Deadline
+			input(type='text' name='DDL')
+			input(type='submit' value='submit')
